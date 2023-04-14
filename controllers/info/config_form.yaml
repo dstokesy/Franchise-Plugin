@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: dstokesy.franchises::lang.name.info_singular
+
+# Model Form Field configuration
+form: $/dstokesy/franchises/models/info/fields.yaml
+
+# Model Class name
+modelClass: Dstokesy\Franchises\Models\Info
+
+# Default redirect location
+defaultRedirect: dstokesy/franchises/info
+
+# Create page
+create:
+    title: dstokesy.franchises::lang.franchise_info.create
+    redirect: dstokesy/franchises/info/update/:id
+    redirectClose: dstokesy/franchises/info
+
+# Update page
+update:
+    title: dstokesy.franchises::lang.franchise_info.update
+    redirect: dstokesy/franchises/info
+    redirectClose: dstokesy/franchises/info
+
+# Preview page
+preview:
+    title: dstokesy.franchises::lang.franchise_info.preview

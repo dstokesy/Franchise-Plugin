@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    franchise_name:
+        type: partial
+
+    phone_number:
+        label: Phone Number
+        span: auto
+
+    email:
+        label: Email Address
+        span: auto

@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+
+    is_live:
+        label: Live
+        type: isactive
+
+    btns:
+        label: ''
+        type: partial
+        path: $/dstokesy/franchises/controllers/franchises/_btns.htm
+        sortable: false
+        searchable: false
+        clickable: false

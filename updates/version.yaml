@@ -1,0 +1,9 @@
+1.0.1:
+    - 'Create franchises table'
+    - create_franchises_table.php
+1.0.2:
+    - 'Adds franchise id to backend users'
+    - adds_franchise_id_to_backend_users.php
+1.0.3:
+    - 'Create infos table'
+    - create_infos_table.php

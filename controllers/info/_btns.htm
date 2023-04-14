@@ -1,0 +1,10 @@
+<?php
+if ($record->franchise) {
+	?>
+	<a href="/admin/dstokesy/franchises/franchises/update/<?=$record->franchise->id?>" class="btn btn-xs btn-default">Edit <?=e(trans('dstokesy.franchises::lang.name.singular'))?></a>
+	<a href="<?=$record->franchise->host?>" class="btn btn-xs btn-primary" target="_blank">Visit Homepage</a>
+	<a href="<?=$record->franchise->host?>/<?=\Config::get('cms.backendUri')?>" class="btn btn-xs btn-primary" target="_blank">Visit Admin</a>
+	<?php
+}
+?>
+

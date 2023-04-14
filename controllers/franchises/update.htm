@@ -1,0 +1,70 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('dstokesy/franchises/franchises') ?>"><?=e(trans('dstokesy.franchises::lang.name.plural'))?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class' => 'layout']) ?>
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onSave"
+                    data-request-data="redirect:0"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="Saving <?=e(trans('dstokesy.franchises::lang.name.singular'))?>..."
+                    class="btn btn-primary">
+                    Save
+                </button>
+
+                <button
+                    type="button"
+                    data-request="onCancel"
+                    class="btn btn-primary">
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-default"
+                    data-request="onDelete"
+                    data-load-indicator="Deleting <?=e(trans('dstokesy.franchises::lang.name.singular'))?>..."
+                    data-request-confirm="Delete this <?=e(trans('dstokesy.franchises::lang.name.singular'))?>?">
+                    Delete
+                </button>
+
+                <?php
+				if ($this->vars['formModel']->info) {
+					?>
+					<a href="<?= \Backend::url('dstokesy/franchises/info/update/' . $formModel->info->id) ?>" class="btn btn-primary">
+					    Edit <?=e(trans('dstokesy.franchises::lang.name.info_singular'))?>
+					</a>
+					<?php
+				}
+				?>
+
+                <a href="<?=$formModel->host?>" class="btn btn-primary">
+				    Visit Homepage
+				</a>
+
+                <a href="<?=$formModel->host?>/<?=\Config::get('cms.backendUri')?>" class="btn btn-primary">
+				    Visit Admin
+				</a>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('dstokesy/franchises/franchises') ?>" class="btn btn-default">Return to <?=e(trans('dstokesy.franchises::lang.name.plural'))?> list</a></p>
+
+<?php endif ?>

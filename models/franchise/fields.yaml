@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: auto
+
+    slug:
+        label: Slug
+        span: auto
+        preset: name
+
+    domain:
+        label: Domain
+        span: auto
+
+    is_live:
+        label: Live?
+        type: switch
+        span: left

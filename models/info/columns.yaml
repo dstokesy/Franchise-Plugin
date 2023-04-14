@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    franchise_name:
+        label: Franchise
+        relation: franchise
+        select: name
+        searchable: true
+
+    btns:
+        label: ''
+        type: partial
+        path: btns
+        sortable: false
+        searchable: false
+        clickable: false
