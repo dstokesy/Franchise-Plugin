@@ -1,4 +1,4 @@
-# Franchise Plugin
+# October CMS Franchise Plugin
 
 ---
 ## Authors
